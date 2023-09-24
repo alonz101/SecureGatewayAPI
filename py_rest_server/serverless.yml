@@ -22,6 +22,10 @@ functions:
           path: /products
           method: ANY
           cors: true
+      - http:
+          path: /products/type/{product_type}
+          method: get
+          cors: true
 
 plugins:
   - serverless-python-requirements
