@@ -13,16 +13,13 @@ provider:
         - dynamodb:Query
         - dynamodb:Scan
       Resource: "arn:aws:dynamodb:us-east-1:603684165690:table/products-table"
+
 functions:
   app:
     handler: app.handler
     events:
       - http:
-          path: /
-          method: ANY
-          cors: true
-      - http:
-          path: "{proxy+}"
+          path: /products
           method: ANY
           cors: true
 
