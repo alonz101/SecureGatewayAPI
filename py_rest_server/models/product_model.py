@@ -1,11 +1,12 @@
+from typing import Optional
 from pydantic import BaseModel
 
 
 class Product(BaseModel):
-    id: str
+    id: int
     name: str
-    description: str
-    quantity: int
+    description: Optional[str] = None
+    quantity: Optional[int] = None
     price: float
     size: str
     image: str

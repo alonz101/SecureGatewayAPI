@@ -12,7 +12,9 @@ provider:
         - dynamodb:GetItem
         - dynamodb:Query
         - dynamodb:Scan
-      Resource: "arn:aws:dynamodb:us-east-1:603684165690:table/products-table"
+      Resource:
+        - arn:aws:dynamodb:us-east-1:603684165690:table/products-table
+        - arn:aws:dynamodb:us-east-1:603684165690:table/products-table/index/TypeIndex
 
 functions:
   app:
