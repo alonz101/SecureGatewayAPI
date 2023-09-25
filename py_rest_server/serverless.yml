@@ -15,6 +15,7 @@ provider:
       Resource:
         - arn:aws:dynamodb:us-east-1:603684165690:table/products-table
         - arn:aws:dynamodb:us-east-1:603684165690:table/products-table/index/TypeIndex
+        - arn:aws:dynamodb:us-east-1:603684165690:table/chat-table
 
 functions:
   app:
@@ -28,9 +29,14 @@ functions:
           path: /products/type/{product_type}
           method: get
           cors: true
+      - http:
+          path: /messages
+          method: ANY
+          cors: true
 
 plugins:
   - serverless-python-requirements
+  - serverless-offline
 
 custom:
   pythonRequirements:
