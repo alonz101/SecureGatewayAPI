@@ -33,6 +33,10 @@ functions:
           path: /messages
           method: ANY
           cors: true
+      - http:
+          path: /messages/{message}
+          method: ANY
+          cors: true
 
 plugins:
   - serverless-python-requirements

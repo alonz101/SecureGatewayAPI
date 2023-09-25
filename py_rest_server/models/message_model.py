@@ -9,3 +9,12 @@ class message(BaseModel):
     senderId: Optional[str] = None
     chatRoomId: Optional[str] = None
     timestamp: datetime
+
+    def to_dict(self):
+        return {
+            "messageId": self.messageId,
+            "content": self.content,
+            "senderId": self.senderId,
+            "chatRoomId": self.chatRoomId,
+            "timestamp": self.timestamp.isoformat()
+        }
