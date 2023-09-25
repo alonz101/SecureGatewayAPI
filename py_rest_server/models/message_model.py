@@ -8,7 +8,7 @@ class message(BaseModel):
     content: str
     senderId: Optional[str] = None
     chatRoomId: Optional[str] = None
-    timestamp: datetime
+    timestamp: Optional[datetime] = None
 
     def to_dict(self):
         return {
