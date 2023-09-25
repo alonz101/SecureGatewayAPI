@@ -17,6 +17,6 @@ def create_message(msg: message) -> dict:
         msg.messageId = str(uuid.uuid4())
     if not msg.timestamp:
         msg.timestamp = datetime.now()
-        dynamodb = get_dynamodb_resource().Table('chat-table')
-        response = dynamodb.put_item(Item=msg.to_dict())
-        return response
+    dynamodb = get_dynamodb_resource().Table('chat-table')
+    response = dynamodb.put_item(Item=msg.to_dict())
+    return response
