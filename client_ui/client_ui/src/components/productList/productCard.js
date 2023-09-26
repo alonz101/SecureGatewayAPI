@@ -4,11 +4,11 @@ import React from 'react';
 
 const ProductCard = ({ product }) => {
     return (
-        <Card style={{ maxWidth: 345, margin: 20 }}>
+        <Card style={{ maxWidth: 345, margin: 20 , height: 750 }}>
             <CardMedia
                 component="img"
                 alt={product.name}
-                height="250"
+                height="500"
                 image={product.image}
                 title={product.name}
             />
@@ -26,11 +26,6 @@ const ProductCard = ({ product }) => {
                     Size: {product.size}
                 </Typography>
             </CardContent>
-            <CardActions>
-                <Button size="small" color="primary">
-                    Learn More
-                </Button>
-            </CardActions>
         </Card>
     );
 };
