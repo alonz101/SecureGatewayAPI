@@ -1,5 +1,6 @@
 import { Tab, Tabs } from '@mui/material';
 
+import About from '../about/about';
 import ChatContainer from '../chat/chatContainer';
 import Grid from '@mui/material/Grid';
 import Product from '../product/product';
@@ -13,7 +14,7 @@ function Home() {
   };
 
   return (
-    <div className="home-contianer">
+    <div className="home-contianer" >
       <Grid container justifyContent="center">
       <Tabs value={value} onChange={handleChange} 
       sx={{
@@ -21,22 +22,31 @@ function Home() {
           justifyContent: 'center',
           alignItems: 'center',
           height: '100px',
-          fontSize: '1.5rem',
+          fontSize: '5rem',
         }}>
-        <Tab label="Products"
+        <Tab label="About"
           sx={{
             minWidth: '200px',
             minHeight: '70px',
+            fontSize: '2rem',
+          }} />
+        <Tab label="Store"
+          sx={{
+            minWidth: '200px',
+            minHeight: '70px',
+            fontSize: '2rem',
           }} />
         <Tab label="Chat"           
           sx={{
             minWidth: '200px',
             minHeight: '70px',
+            fontSize: '2rem',
           }} />
       </Tabs>
       </Grid>
-      {value === 0 && <Product />}
-      {value === 1 && <ChatContainer />}
+      {value === 0 && <About />}
+      {value === 1 && <Product />}
+      {value === 2 && <ChatContainer />}
 
 
     </div>

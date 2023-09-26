@@ -4,7 +4,7 @@ import React from 'react';
 
 const ProductCard = ({ product }) => {
     return (
-        <Card style={{ maxWidth: 345, margin: 20 , height: 750 }}>
+        <Card style={{ maxWidth: 345, margin: 20 , height: 750  , backgroundColor:'#FFEEDD'}}>
             <CardMedia
                 component="img"
                 alt={product.name}
