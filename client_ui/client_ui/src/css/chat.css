@@ -1,0 +1,115 @@
+.chat-container {
+    max-width: 600px;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .chat-title {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+  
+  .message-list {
+    max-height: 400px;
+    overflow-y: scroll;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .message-item {
+    margin-bottom: 15px;
+    padding: 8px;
+    border-radius: 6px;
+    background-color: #f7f7f7;
+  }
+  
+  .message-item p {
+    font-size: 1.2em;
+    margin: 0;
+  }
+  
+  .message-item .sender {
+    font-weight: bold;
+  }
+  
+  .chat-input-container {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .chat-input {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 1.2em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .chat-button {
+    padding: 8px 15px;
+    font-size: 1.2em;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .chat-button:hover {
+    background-color: #0056b3;
+  }
+
+  .message-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .message-text {
+    font-size: 1.2em;
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+  .message-time {
+    font-size: 0.9em;
+    color: #777;
+  }
+
+  /* Existing Styles... */
+
+/* For the textarea */
+.chat-input textarea {
+    width: 90%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical; /* This will allow users to resize the textarea vertically if needed */
+  }
+  
+  /* Style for the send button */
+  .send-button {
+    margin-left: 10px;
+    padding: 8px 12px;
+    background: linear-gradient(45deg, #007BFF, #00C6FF);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .send-button:hover {
+    background: linear-gradient(45deg, #005BDF, #008AD6);
+  }
+  
+  
+  
+  

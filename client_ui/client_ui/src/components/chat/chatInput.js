@@ -1,3 +1,5 @@
+import '../../css/chat.css';
+
 import React, { useState } from 'react';
 
 import { createMessage } from '../../features/chatSlice';
@@ -18,13 +20,13 @@ const ChatInput = () => {
 
   return (
     <form onSubmit={handleSubmit} className="chat-input">
-      <input
-        type="text"
+      <textarea
+        rows="4"
         value={content}
         onChange={(e) => setContent(e.target.value)}
         placeholder="Type a message..."
       />
-      <button type="submit">Send</button>
+      <button type="submit" className="send-button">Send</button>
     </form>
   );
 };

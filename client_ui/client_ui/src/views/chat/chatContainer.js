@@ -1,3 +1,5 @@
+import '../../css/chat.css';
+
 import ChatInput from '../../components/chat/chatInput';
 import MessageList from '../../components/chat/messageList';
 import React from 'react';
