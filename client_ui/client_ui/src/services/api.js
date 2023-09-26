@@ -15,7 +15,7 @@ export const fetchMessages = async () => {
   };
   
   export const postMessage = async (content) => {
-    const response = await fetch(`${endpoint}/message`, {
+    const response = await fetch(`${endpoint}/messages`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

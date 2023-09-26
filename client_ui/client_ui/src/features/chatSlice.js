@@ -3,7 +3,7 @@ import { fetchMessages, postMessage } from '../services/api';
 
 export const getMessages = createAsyncThunk('chat/fetchMessages', async () => {
   const response = await fetchMessages();
-  return response.data;
+  return response;
 });
 
 export const createMessage = createAsyncThunk('chat/postMessage', async (content) => {

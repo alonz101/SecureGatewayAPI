@@ -4,7 +4,7 @@ from datetime import datetime
 
 
 class message(BaseModel):
-    messageId: str
+    messageId: Optional[str] = None
     content: str
     senderId: Optional[str] = None
     chatRoomId: Optional[str] = None
