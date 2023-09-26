@@ -5,12 +5,12 @@ from routes import chat
 import os
 
 # Check if we're in a development environment
-if os.environ.get("ENV") == "development":
-    import debugpy
-    debugpy.listen(5678)
-    print("Waiting for debugger to attach...")
-    debugpy.wait_for_client()
-    print("connected")
+# if os.environ.get("ENV") == "development":
+#     import debugpy
+#     debugpy.listen(5678)
+#     print("Waiting for debugger to attach...")
+#     debugpy.wait_for_client()
+#     print("connected")
 
 # Initialize FastAPI app
 app = FastAPI()
