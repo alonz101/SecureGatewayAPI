@@ -14,13 +14,13 @@ export const fetchMessages = async () => {
     return data;
   };
   
-  export const postMessage = async (content) => {
+  export const postMessage = async (message) => {
     const response = await fetch(`${endpoint}/messages`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ content }),
+      body: JSON.stringify( {message} ),
     });
   
     if (!response.ok) {
@@ -28,7 +28,7 @@ export const fetchMessages = async () => {
       throw new Error(data.message || 'Failed to post message');
     }
   
-    return content;
+    return message;
   };
 
 // Other functions to interact with endpoints

@@ -1,8 +1,11 @@
 from fastapi import FastAPI
 from mangum import Mangum
+
 from routes import products
 from routes import chat
 from fastapi.middleware.cors import CORSMiddleware
+from utils.CORS_origin import origins
+
 import os
 
 # Check if we're in a development environment
@@ -13,17 +16,10 @@ import os
 #     debugpy.wait_for_client()
 #     print("connected")
 
+
 # Initialize FastAPI app
 app = FastAPI()
 
-# Add CORS middleware
-origins = [
-    "http://localhost:3000",
-    "http://localhost:4000",
-    "http://d23iu1t3kkgjfa.cloudfront.net",
-    "https://d23iu1t3kkgjfa.cloudfront.net",
-    # add other origins if needed
-]
 
 app.add_middleware(
     CORSMiddleware,

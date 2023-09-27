@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 
 import { createMessage } from '../../features/chatSlice';
 import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 
 const ChatInput = () => {
   const [content, setContent] = useState('');
@@ -13,7 +14,8 @@ const ChatInput = () => {
     e.preventDefault();
 
     if (content.trim()) {
-      dispatch(createMessage(content));
+      const msg = {content ,messageId:uuidv4()}
+      dispatch(createMessage(msg));
       setContent('');
     }
   };

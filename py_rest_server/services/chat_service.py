@@ -13,10 +13,6 @@ def list_messages():
 
 
 def create_message(msg: message) -> dict:
-    if not msg.messageId:
-        msg.messageId = str(uuid.uuid4())
-    if not msg.timestamp:
-        msg.timestamp = datetime.now()
     dynamodb = get_dynamodb_resource().Table('chat-table')
     response = dynamodb.put_item(Item=msg.to_dict())
     return response
