@@ -18,11 +18,20 @@ const ChatInput = () => {
     }
   };
 
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter' && !event.shiftKey) {
+        event.preventDefault(); // Prevents the default action (newline)
+        handleSubmit(event); // Your function to send the message
+    }
+}
+
+
   return (
     <form onSubmit={handleSubmit} className="chat-input">
       <textarea
         rows="4"
         value={content}
+        onKeyDown={handleKeyDown}
         onChange={(e) => setContent(e.target.value)}
         placeholder="Type a message..."
       />
