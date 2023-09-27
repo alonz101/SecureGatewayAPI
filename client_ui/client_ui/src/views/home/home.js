@@ -22,25 +22,25 @@ function Home() {
           justifyContent: 'center',
           alignItems: 'center',
           height: '100px',
-          fontSize: '5rem',
+          fontSize: '1rem',
         }}>
         <Tab label="About"
           sx={{
-            minWidth: '200px',
+            minWidth: '120px',
             minHeight: '70px',
-            fontSize: '2rem',
+            fontSize: '1.3rem',
           }} />
         <Tab label="Store"
           sx={{
-            minWidth: '200px',
+            minWidth: '120px',
             minHeight: '70px',
-            fontSize: '2rem',
+            fontSize: '1.3rem',
           }} />
         <Tab label="Chat"           
           sx={{
-            minWidth: '200px',
+            minWidth: '120px',
             minHeight: '70px',
-            fontSize: '2rem',
+            fontSize: '1.3rem',
           }} />
       </Tabs>
       </Grid>

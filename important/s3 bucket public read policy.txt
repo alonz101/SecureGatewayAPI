@@ -1,0 +1,14 @@
+// add this policy to s3 bucket clientui205494479 for giving access for cloudfront to access the site data
+
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "PublicRead",
+			"Effect": "Allow",
+			"Principal": "*",
+			"Action": "s3:GetObject",
+			"Resource": "arn:aws:s3:::clientui205494479/*"
+		}
+	]
+}
