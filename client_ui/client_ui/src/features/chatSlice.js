@@ -24,18 +24,17 @@ const chatSlice = createSlice({
     [getMessages.fulfilled]: (state, action) => {
       return action.payload;
     },
-    [createMessage.fulfilled]: (state, action) => {
-      state.push({
-        content: action.payload,
-        senderId: 'currentUserId',
-        timestamp: new Date().toISOString(),
-        // messageId should be provided by your backend after a successful postMessage
-      });
-    },
+    // [createMessage.fulfilled]: (state, action) => {
+    //   state.push({
+    //     content: action.payload.content,
+    //     messageId: action.payload.messageId,
+    //     senderId: 'currentUserId',
+    //     timestamp: new Date().toISOString(),
+    //   });
+    // },
   },
 });
 
-// Export the new reducer for use in the Pusher event
 export const { addReceivedMessage } = chatSlice.actions;
 
 export default chatSlice.reducer;

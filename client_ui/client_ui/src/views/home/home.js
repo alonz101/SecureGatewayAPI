@@ -26,21 +26,21 @@ function Home() {
         }}>
         <Tab label="About"
           sx={{
-            minWidth: '120px',
-            minHeight: '70px',
-            fontSize: '1.3rem',
+            minWidth: '70px',
+            minHeight: '50px',
+            fontSize: '1.1rem',
           }} />
         <Tab label="Store"
           sx={{
-            minWidth: '120px',
-            minHeight: '70px',
-            fontSize: '1.3rem',
+            minWidth: '70px',
+            minHeight: '50px',
+            fontSize: '1.1rem',
           }} />
         <Tab label="Chat"           
           sx={{
-            minWidth: '120px',
-            minHeight: '70px',
-            fontSize: '1.3rem',
+            minWidth: '70px',
+            minHeight: '50px',
+            fontSize: '1.1rem',
           }} />
       </Tabs>
       </Grid>
