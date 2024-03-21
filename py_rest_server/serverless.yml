@@ -41,3 +41,10 @@ plugins:
 custom:
   pythonRequirements:
     dockerizePip: non-linux
+
+package:
+  exclude:
+    - .git/**
+    - venv/**
+    - __pycache__/**
+    - myenv/**

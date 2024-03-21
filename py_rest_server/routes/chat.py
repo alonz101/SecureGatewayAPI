@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timezone
 import uuid
 from fastapi import APIRouter, Body, HTTPException
 from utils.pusher_client import pusher_client
@@ -18,7 +18,7 @@ async def post_message(msg: message = Body(...)):
     if not msg.messageId:
         msg.messageId = str(uuid.uuid4())
     if not msg.timestamp:
-        msg.timestamp = datetime.now()
+        msg.timestamp = datetime.now(timezone.utc)
     item = create_message(msg)
     if item:
         # Trigger the event on Pusher

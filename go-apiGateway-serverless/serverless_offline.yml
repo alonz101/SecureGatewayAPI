@@ -1,0 +1,45 @@
+
+service: go-apigateway-serverless
+
+frameworkVersion: '3'
+
+plugins: 
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: go1.x
+  stage: local
+
+custom:
+  serverless-offline:
+    noPrependStageUrl: true
+
+
+package:
+  patterns:
+    # - '!./**'
+    - ./bin/**
+
+functions:
+  # hello:
+  #   handler: bin/hello
+  #   timeout: 30
+  #   events:
+  #     - httpApi:
+  #         path: /hello
+  #         method: get
+  # world:
+  #   handler: bin/world
+  #   timeout: 30
+  #   events:
+  #     - httpApi:
+  #         path: /world
+  #         method: get
+  apiGateway:
+    handler: bin/gateway
+    timeout: 30
+    events:
+      - httpApi:
+          path: /{proxy+}
+          method: any

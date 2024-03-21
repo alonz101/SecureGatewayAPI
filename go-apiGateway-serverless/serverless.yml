@@ -1,0 +1,62 @@
+
+# service: go-apigateway-serverless
+
+# frameworkVersion: '3'
+
+# plugins: 
+#   - serverless-offline
+
+# provider:
+#   name: aws
+#   runtime: go1.x
+#   stage: dev
+#   region: us-east-1 
+# custom:
+#   serverless-offline:
+#     noPrependStageUrl: true
+
+
+# package:
+#   patterns:
+#     # - '!./**'
+#     - ./bin/**
+
+# functions:
+#   apiGateway:
+#     handler: bin/gateway
+#     events:
+#       - httpApi:
+#           path: /{proxy+}
+#           method: get
+#           payload: '1.0'
+#           cors: true
+service: go-apigateway-serverless
+
+frameworkVersion: '3'
+
+plugins: 
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: go1.x
+  stage: dev
+  region: us-east-1
+  httpApi:
+    cors: true  # Enable CORS for all HTTP API routes
+
+custom:
+  serverless-offline:
+    noPrependStageUrl: true
+
+package:
+  patterns:
+    - ./bin/**  # Ensure only the compiled binaries and necessary files are included in the deployment package
+
+functions:
+  apiGateway:
+    handler: bin/gateway
+    events:
+      - httpApi:
+          path: /{proxy+}
+          method: any  # This configures your Lambda function to be triggered by GET requests to any path
